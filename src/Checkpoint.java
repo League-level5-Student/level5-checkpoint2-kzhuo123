@@ -14,7 +14,7 @@ public class Checkpoint {
 		 * 
 		 * Use the method provided to get an ArrayList of CarMPGEntry objects. Convert the ArrayList into a Stream.
 		 * Using streams, perform the following:
-		 * 
+		 
 		 * 1. Print the entire list.
 		 * 
 		 * 
@@ -29,7 +29,11 @@ public class Checkpoint {
 		 * 
 		 * 5. Print only the cars with "toyota" in the name.
 		 */
-		
+		ArrayList <CarMPGEntry> listarr = readCarMPGEntryDataFromFile();
+		Stream <CarMPGEntry> cars = listarr.stream();
+		cars.forEach(y->System.out.println(y.carName));
+		Stream <CarMPGEntry> cars1 = listarr.stream();
+		cars1.forEach(y->System.out.println(y.mpg));
 		
 	}
 	
